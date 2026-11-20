@@ -3,18 +3,18 @@ float get_temp(void){
     unsigned int adc_val;
     float voltage;
     adc_val=adc_read(0);
-    voltage=(adc_val*3.3)/1023.0;
+    voltage=(adc_val*3.3)/1023;
     return voltage/0.01;
 }
 float get_ldr(void){
     unsigned int adc_val;
     adc_val=adc_read(1);
-    return (adc_val*100.0)/1023.0;
+    return (adc_val*100)/1023;
 }
 float get_moisture(void){
     unsigned int adc_val;
     adc_val=adc_read(2);
-    return (adc_val*100.0)/1023.0;
+    return (adc_val*100)/1023;
 }
 unsigned int tempcheck(float temp){
     if(temp<35)
